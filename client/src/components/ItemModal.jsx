@@ -43,7 +43,7 @@ const ItemModal = (props) => {
         <div>
             <Button
                 color="dark"
-                style={{ marginBottom: '2rem' }}
+                style={{ marginBottom: '2rem', marginLeft: '7rem', display: 'block' }}
                 onClick={toggle}>
                 Add Item
             </Button>

@@ -6,12 +6,10 @@ import ShoppingList from './components/ShoppingList';
 import { Provider } from 'react-redux';
 import store from './store';
 import ItemModal from './components/ItemModal';
-import ErrorBoundary from './ErrorBoundary';
 
 function App() {
   return (
     <Provider store={store}>
-      <ErrorBoundary>
         <div className="App">
           <AppNavbar />
           
@@ -20,7 +18,6 @@ function App() {
           <ShoppingList />
 
         </div>
-      </ErrorBoundary>
     </Provider>
   );
 }

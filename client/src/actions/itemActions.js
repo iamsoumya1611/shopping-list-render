@@ -15,8 +15,6 @@ const api = axios.create({
   baseURL: API_BASE_URL
 });
 
-
-
 export const getItems = () => dispatch => {
     dispatch(setItemsLoading());
     console.log('Fetching items from API...');

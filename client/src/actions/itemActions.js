@@ -22,7 +22,8 @@ export const getItems = () => dispatch => {
     console.log('Fetching items from API...');
     
     // Return the Promise so we can handle it in components
-    return api.get('/api/items')
+    // Removed the redundant '/api' prefix since the proxy or baseURL should handle this
+    return api.get('/items')
         .then(res => {
             // console.log('Received items from API:', res.data);
             dispatch({
@@ -52,7 +53,8 @@ export const getItems = () => dispatch => {
 };
 
 export const deleteItem = id => dispatch => {
-    api.delete(`/api/items/${id}`)
+    // Removed the redundant '/api' prefix since the proxy or baseURL should handle this
+    api.delete(`/items/${id}`)
         .then(res => 
             dispatch({
                 type: DELETE_ITEM,
@@ -66,7 +68,8 @@ export const deleteItem = id => dispatch => {
 };
 
 export const addItem = item => dispatch => {
-    api.post('/api/items', item)
+    // Removed the redundant '/api' prefix since the proxy or baseURL should handle this
+    api.post('/items', item)
         .then(res => 
             dispatch({
                 type: ADD_ITEM,

@@ -5,7 +5,7 @@ import axios from 'axios';
 // In production, use the backend service URL from environment variable; in development, use localhost
 const isProduction = process.env.NODE_ENV === 'production';
 const API_BASE_URL = isProduction 
-  ? process.env.REACT_APP_API_URL || ''  // Use environment variable or empty string (same domain)
+  ? process.env.REACT_APP_API_URL
   : 'http://localhost:5000';
 
 console.log('Environment:', process.env.NODE_ENV);

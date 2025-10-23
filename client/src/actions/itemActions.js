@@ -6,7 +6,7 @@ import axios from 'axios';
 const isProduction = process.env.NODE_ENV === 'production';
 const API_BASE_URL = isProduction 
   ? process.env.REACT_APP_API_URL
-  : 'http://localhost:5000';
+  : 'http://localhost:5000/api';
 
 console.log('Environment:', process.env.NODE_ENV);
 console.log('API Base URL:', API_BASE_URL);

@@ -13,7 +13,9 @@ const app = express();
 app.use(bodyParser.json());
 
 // CORS Middleware
-app.use(cors());
+app.use(cors(
+    {origin: '*'}
+));
 
 // DB Config
 const db = require('./config/keys').mongoURI;

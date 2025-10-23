@@ -29,15 +29,6 @@ mongoose
 // API Routes
 app.use('/api/items', items);
 
-// Health check route
-app.get('/health', (req, res) => {
-    res.status(200).json({ 
-        status: 'OK', 
-        message: 'Server is running',
-        timestamp: new Date().toISOString()
-    });
-});
-
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
     // Set static folder
